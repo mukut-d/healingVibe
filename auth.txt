@@ -1,0 +1,36 @@
+ 
+ 
+ const signUpWithEmailPass = async () => {
+    if (userEmail === "" || password === "" || confirmPassword === "") {
+      // alert message
+      dispatch(alertInfo("Required fields should not be empty"));
+    } else {
+      if (password === confirmPassword) {
+        setUserEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        await createUserWithEmailAndPassword(
+          firebaseAuth,
+          userEmail,
+          password
+        ).then((userCred) => {
+          firebaseAuth.onAuthStateChanged((cred) => {
+            // console.log(cred);  - to see access tokens
+            if (cred) {
+              cred.getIdToken().then((token) => {
+                // console.log("token-",token)
+                validateUserJWTToken(token).then((data) => {
+                  //  console.log(data);
+                  dispatch(setUserDetails(data));
+                });
+                navigate("/", { replace: true });
+              });
+            }
+          });
+        });
+      } else {
+        // alert message
+        dispatch(alertWarning("Password doesn't match"));
+      }
+    }
+  };

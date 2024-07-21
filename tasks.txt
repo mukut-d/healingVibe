@@ -1,0 +1,38 @@
+
+tasks left :--
+
+
+-- work on home screen skip functionality - it's not skip its next functionality -  done
+-- hide arrow on weekly calendar --  done -- display: none - karna tha!
+-- thank you slide has linear gradient implement it -- not done!
+
+
+-- put email and password validation in formfields array ke rules properties --  done
+-- back image in settings not visible - idk y -  done
+
+    open items
+-- maximum call stack size exceeded issue occurs when i click close button - not done
+-- change the styling of the tabs in the profile information section
+
+-- App is almost complete - just radio button part and weekly calendar part is left & also the dollar sign should be up -- done
+
+-- Adding custom font to splash screens -- not done ( tried but getting erros )
+
+
+# Apart from this app is almost complete!
+
+
+FIXES RECOMMENDED ---
+
+1 - form container styling ISSUES - fixed - used flex:1 property
+2 - bottom sheet backdrop not implemented - can be fixed -- done - (used bottomsheet backdrop prop)
+3 - flatlist slides - enter reply not in top - not able to ( used textAlignVertical prop of textInput component)
+4 - swiping slides doesn't hold in middle - no idea - (fixed the width of the prop )
+5 - last slides linear gradient in background - not able to - (have to try then will verdict)
+6 - remove fixed values of height , width from the whole app :p -- done
+7 - check for keyboard avoiding view in input fields - (used keyboardaware view package)
+8 - implement clock in reminders screen -- almost done - have to look on logic part - done
+9 - fix settings screen touch experience -- done -- dimenstions api - use kiya!
+
+
+That's it :p
